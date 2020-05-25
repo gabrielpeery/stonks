@@ -1,0 +1,119 @@
+@import '../../App.scss';
+body {
+    font-family: "Open"
+}
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+    min-width: 480px;
+    margin-top: 1em;
+    height: 8.5em;
+}
+
+// stock slider
+.slider {
+    display: flex;
+    flex-basis: 18%;
+    padding: 1em;
+}
+
+.trending-down {
+    background-image: linear-gradient(to bottom, $light-red, $dark-red)
+}
+.trending-up {
+    background-image: linear-gradient(to bottom, $light-green, $dark-green)
+}
+
+.scale {
+    display: flex;
+    position: relative;
+    width: 1em;
+}
+.triangle {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+}
+.bar {
+    position: absolute;
+    left: 9px;
+    height: 100%;
+    background: white;
+    width: 2px;
+}
+.labels {
+    margin-left: 0.75em;
+    color: #FFF;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// card body
+.body {
+    flex-grow: 4;
+    text-transform: uppercase;
+    margin: 1em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.symbol-name {
+    div.title {
+        font-weight: bolder;
+        margin-bottom: 0;
+        font-size: 1.25rem;
+    }
+    div.symbol {
+        padding: 0;
+        margin-top: -10px;
+        font-weight: bold;
+        color: $caption;
+    }
+}
+
+.current-price {
+    font-weight: 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .trend {
+        margin-left: 1em;
+        color: $green;
+        .points {
+            display: flex;
+            justify-items: flex-end;
+            .down {
+                color: $red;
+            }
+            .up {
+                color: $green;
+            }
+            .arrow {
+                height: 0.6em;
+                width: 0.6em;
+                background: none;
+                margin-right: 0.25em;
+                margin-top: 0;
+                .up {
+                    fill: $green;
+                }
+                .down {
+                    fill: $red;
+                }
+            }
+        }
+    }
+}
+.splits {
+    color: $type;
+    span {
+        color: $blue;
+    }
+}
+.value {
+    font-size: 1.5em;
+}
